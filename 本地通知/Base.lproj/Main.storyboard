@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,15 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-le-07Y">
-                                <rect key="frame" x="110" y="451" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-le-07Y">
+                                <rect key="frame" x="106" y="451" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YNI-7q-Y7r"/>
+                                </constraints>
                                 <state key="normal" title="取消本地通知"/>
                                 <connections>
                                     <action selector="noSchedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0h3-dZ-hfe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk7-Jm-unL">
-                                <rect key="frame" x="110" y="400" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk7-Jm-unL">
+                                <rect key="frame" x="106" y="400" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iYh-8m-ouC"/>
+                                </constraints>
                                 <state key="normal" title="调度本地通知"/>
                                 <connections>
                                     <action selector="schedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kA-LO-wPo"/>
@@ -33,6 +40,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mc0-le-07Y" firstAttribute="top" secondItem="Tk7-Jm-unL" secondAttribute="bottom" constant="21" id="15U-vn-d0i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mc0-le-07Y" secondAttribute="trailing" constant="100" id="8NO-yh-k6x"/>
+                            <constraint firstItem="Tk7-Jm-unL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="J5Q-oe-Q4K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mc0-le-07Y" secondAttribute="bottom" constant="87" id="W13-fU-iHW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tk7-Jm-unL" secondAttribute="trailing" constant="100" id="WLf-Su-6Dg"/>
+                            <constraint firstItem="Mc0-le-07Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="qcX-at-gcz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dFW-bJ-Twb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -58,15 +73,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新闻具体内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-1e-oq9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="新闻具体内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-1e-oq9">
                                 <rect key="frame" x="0.0" y="64" width="320" height="308"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="4Jh-zp-UXm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ofv-1e-oq9" firstAttribute="leading" secondItem="DyW-25-fC4" secondAttribute="leadingMargin" constant="-20" id="MgY-zO-ePs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ofv-1e-oq9" secondAttribute="trailing" constant="-20" id="Oej-3A-1uM"/>
+                            <constraint firstItem="ofv-1e-oq9" firstAttribute="top" secondItem="IHX-1r-cGs" secondAttribute="bottom" id="tKS-bD-VMq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="新闻正文" id="6aG-9h-fmN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
